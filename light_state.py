@@ -30,7 +30,7 @@ class StateHelper:
             cls.DEFAULT_FREQUENCY_KEY: 40,
             cls.FREQUENCY_KEY: 2,
             cls.MIN_DUTY_CYCLE_KEY: 10,
-            cls.MAX_DUTY_CYCLE_KEY: 50,
+            cls.MAX_DUTY_CYCLE_KEY: 80,
             cls.DUTY_CYCLE_KEY: 50,
             cls.BRIGHTNESS_KEY: 255,
             cls.RED_KEY: 127,
@@ -48,7 +48,7 @@ class Limits:
 
     @classmethod
     def get_duty_cycle_in_limits(cls, duty_cycle) -> int:
-        duty__cycle = int(duty_cycle)
+        duty_cycle = int(duty_cycle)
         duty_cycle = max(duty_cycle, cls.get_min_duty_cycle())
         duty_cycle = min(duty_cycle, cls.get_max_duty_cycle())
         return duty_cycle
@@ -62,19 +62,19 @@ class Limits:
 
     @classmethod
     def get_min_frequency(cls):
-        return StateHelper.get_default_state[StateHelper.MIN_FREQUENCY_KEY]
+        return StateHelper.get_default_state()[StateHelper.MIN_FREQUENCY_KEY]
 
     @classmethod
     def get_max_frequency(cls):
-        return StateHelper.get_default_state[StateHelper.MAX_FREQUENCY_KEY]
+        return StateHelper.get_default_state()[StateHelper.MAX_FREQUENCY_KEY]
 
     @classmethod
     def get_min_duty_cycle(cls):
-        return StateHelper.get_default_state[StateHelper.MIN_DUTY_CYCLE_KEY]
+        return StateHelper.get_default_state()[StateHelper.MIN_DUTY_CYCLE_KEY]
 
     @classmethod
     def get_max_duty_cycle(cls):
-        return StateHelper.get_default_state[StateHelper.MAX_DUTY_CYCLE_KEY]
+        return StateHelper.get_default_state()[StateHelper.MAX_DUTY_CYCLE_KEY]
 
 
 class LightState:

@@ -14,7 +14,6 @@ class Light(Thread):
         self.refresh_period_or_duty_cycle()
 
         self.strip = PixelStrip(150, 18)
-        self.strip.begin()
 
     async def loop(self):
         while True:
@@ -52,6 +51,7 @@ class Light(Thread):
         )
 
     def run(self):
+        self.strip.begin()
         asyncio.run(self.loop())
 
 
