@@ -35,6 +35,7 @@ class Light(Thread):
             self.set_on()
 
     def set_on(self):
+        self.strip.setBrightness(self.state.get_brightness())
         for pixel in range(self.state.get_num_pixels()):
             self.strip.setPixelColorRGB(pixel, self.state.get_red(), self.state.get_green(), self.state.get_blue())
         self.strip.show()
