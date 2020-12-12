@@ -22,7 +22,7 @@ class StateHelper:
     @classmethod
     def get_default_state(cls):
         return {
-            cls.NUM_PIXELS_KEY: 150,
+            cls.NUM_PIXELS_KEY: 136,
             cls.POWER_KEY: True,
             cls.BLINK_KEY: False,
             cls.MIN_FREQUENCY_KEY: 1,

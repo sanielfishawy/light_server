@@ -13,7 +13,7 @@ class Light(Thread):
         self.periodic = None
         self.refresh_period_or_duty_cycle()
 
-        self.strip = PixelStrip(150, 18)
+        self.strip = PixelStrip(self.state.get_num_pixels(), 18)
 
     async def loop(self):
         while True:
